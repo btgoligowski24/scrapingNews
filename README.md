@@ -10,6 +10,7 @@ The app is organized by using standard MVC format.
 1. Navigate to https://blooming-scrubland-09657.herokuapp.com/
 1. You have the following options on the home page:
     * If the page does not have any articles listed, click the "Scrape New Articles" load articles to the page.
+        * Note: It may take a few seconds for the page to reload after scraping as this finds many articles
     * If you want to remove everything, click the "Clear Articles" button.
     * When there are articles to view, you can save individual ones as your favorites that get displayed on the "Saved Articles" page.
     * You can click the "Saved Articles" link to view your saved articles.
