@@ -37,17 +37,11 @@ module.exports = {
         });
     },
     specificArticle: (req, res) => {
-        // Finish the route so it finds one article using the req.params.id,
-        // and run the populate method with "note",
-        // then responds with the article with the note included
         db.Article.findOne({
             _id: req.params.id
-        }).populate("note").then(function (notes) {
-            const handlebarsObj = {
-                notes: notes
-            }
-            console.log(handlebarsObj);
-            res.json(handlebarsObj);
+        }).populate("notes").then(function (article) {
+            console.log(article);
+            res.json(article);
         }).catch(function (err) {
             res.json(err);
         });

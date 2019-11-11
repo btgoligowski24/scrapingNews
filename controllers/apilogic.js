@@ -25,6 +25,11 @@ module.exports = {
                     .text();
                 result.summary = $(this)
                     .find("p")
+                    .first()
+                    .contents()
+                    .filter(function () {
+                        return this.type === "text"
+                    })
                     .text();
                 result.link = $(this)
                     .find("a")
@@ -50,7 +55,7 @@ module.exports = {
 
 
             // Load the home page
-            res.render("index", handlebarsObj);
+            res.render("index");
         });
     },
     addNotes: (req, res) => {
@@ -104,7 +109,11 @@ module.exports = {
     },
     deleteArticles: (req, res) => {
         db.Article.remove({}).then(function (articles) {
-            res.json(articles);
+            db.Note.remove({}).then(function (notes) {
+                res.json(notes);
+            }).catch(function (err) {
+                res.json(err);
+            });
         }).catch(function (err) {
             res.json(err);
         });

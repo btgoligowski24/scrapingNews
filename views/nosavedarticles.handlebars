@@ -1,51 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/">Mongo Scraper</a>
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">Mongo Scraper</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item d-flex">
-                <a class="nav-link align-self-center" href="/">Home</a>
-            </li>
-            <li class="nav-item active d-flex">
-                <a class="nav-link align-self-center" href="/savedArticles">Saved Articles
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li class="nav-item d-flex">
-                <a class="btn btn-danger clear align-self-center">CLEAR ARTICLES!</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<div class="jumbotron text-center">
-    <div class="overlay">
-    </div>
-    <div class="background-image">
-    </div>
-    <div class="caption">
-        <h1>Saved Articles</h1>
-        <p>Your Saved Articles</p>
-    </div>
-</div>
-<div class="container-fluid article-container">
-    <div class="alert alert-warning text-center">
-        <h4>Uh Oh. Looks like we don't have any saved articles.</h4>
-    </div>
-    <div class="card">
-        <div class="card-header text-center">
-            <h3>Would You Like to Browse Available Articles?</h3>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-flex">
+                    <a class="nav-link align-self-center" href="/">Home</a>
+                </li>
+                <li class="nav-item active d-flex">
+                    <a class="nav-link align-self-center" href="/savedArticles">Saved Articles
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a class="btn btn-danger clear align-self-center">CLEAR ARTICLES!</a>
+                </li>
+            </ul>
         </div>
-        <div class="card-body text-center">
-            <h4><a href="/">Browse Articles</a></h4>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <div class="overlay">
+        </div>
+        <div class="background-image">
+        </div>
+        <div class="caption">
+            <h1>Saved Articles</h1>
+            <p>Your Saved Articles</p>
         </div>
     </div>
+    <div class="container-fluid article-container">
+        <div class="alert alert-warning text-center">
+            <h4>Uh Oh. Looks like we don't have any saved articles.</h4>
+        </div>
+        <div class="card">
+            <div class="card-header text-center">
+                <h3>Would You Like to Browse Available Articles?</h3>
+            </div>
+            <div class="card-body text-center">
+                <h4><a href="/">Browse Articles</a></h4>
+            </div>
+        </div>
+    </div>
+    <div class="push"></div>
 </div>
-
-<footer class="footer mt-auto py-1 text-center">
+<footer class="footer text-center">
         <p>WSJ Business Mongo Scraper</p>
 </footer>

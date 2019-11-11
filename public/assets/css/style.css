@@ -1,3 +1,9 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     background-image: url("../images/newspaper.jpg");
     background-size: cover;
@@ -95,7 +101,7 @@ body {
     background-size: cover
 }
 
-.navbar-nav a.scrape-new,
+.navbar-nav a.scrape,
 .navbar-nav a.clear {
     padding: 10px;
     margin: 5px 0;
@@ -104,16 +110,18 @@ body {
     color: white;
 }
 
-.navbar-nav a.scrape-new:hover,
+.navbar-nav a.scrape:hover,
 a.clear:hover {
     background: #4caf50;
 }
 
-.navbar-nav a.scrape-new:active {
+.navbar-nav a.scrape:active {
     background: #e51c23;
 }
 
-a.scrape-new, a.clear {
+a.scrape,
+a.clear,
+a.save {
     cursor: pointer;
     border: none;
 }
@@ -131,6 +139,20 @@ textarea {
 .note.list-group-item .btn {
     position: relative;
     bottom: 10px;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+.footer,
+.push {
+  height: 50px;
+}
+
+footer p {
+    padding-top: 12px;
 }
 
 footer {

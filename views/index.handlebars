@@ -1,55 +1,59 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/">Mongo Scraper</a>
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="wrapper">    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">Mongo Scraper</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active d-flex">
-                <a class="nav-link align-self-center" href="/">Home
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li class="nav-item d-flex">
-                <a class="nav-link align-self-center" href="/savedArticles">Saved Articles</a>
-            </li>
-            <li class="nav-item d-flex">
-                <a class="btn btn-danger scrape-new align-self-center">SCRAPE NEW ARTICLES!</a>
-            </li>
-            <li class="nav-item d-flex">
-                <a class="btn btn-danger clear align-self-center">CLEAR ARTICLES!</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<div class="jumbotron text-center">
-    <div class="overlay">
-    </div>
-    <div class="background-image">
-    </div>
-    <div class="caption">
-        <h1>Mongo Scraper</h1>
-        <p>Wall Street Journal Edition</p>
-    </div>
-</div>
-<div class="container-fluid article-container">
-    {{#each articles}}
-    <div data-_id="{{_id}}" class="card">
-        <div class="card-header">
-            <h3>
-                <a class="article-link" target="_blank" rel="noopener noreferrer"
-                    href="{{link}}">{{title}}</a>
-                <a class="btn btn-success save">Save Article</a>
-            </h3>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active d-flex">
+                    <a class="nav-link align-self-center" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a class="nav-link align-self-center" href="/savedArticles">Saved Articles</a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a class="btn btn-danger scrape align-self-center">SCRAPE NEW ARTICLES!</a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a class="btn btn-danger clear align-self-center">CLEAR ARTICLES!</a>
+                </li>
+            </ul>
         </div>
-        <div class="card-body">{{summary}}</div>
-    </div>
-    {{/each}}
-</div>
+    </nav>
 
-<footer class="footer mt-auto py-1 text-center">
+    <div class="jumbotron text-center">
+        <div class="overlay">
+        </div>
+        <div class="background-image">
+        </div>
+        <div class="caption">
+            <h1>Mongo Scraper</h1>
+            <p>Wall Street Journal Edition</p>
+        </div>
+    </div>
+    <div class="container-fluid article-container">
+        {{#each articles}}
+            <div data-_id="{{_id}}" class="card">
+                <div class="card-header">
+                    <h3>
+                        <a class="article-link" target="_blank" rel="noopener noreferrer"
+                            href="{{link}}">{{title}}</a>
+                        <a class="btn btn-success save">Save Article</a>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    {{#if summary}}{{summary}}{{else}}No summary for this article{{/if}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <div class="push"></div>
+</div>
+<footer class="footer text-center">
         <p>WSJ Business Mongo Scraper</p>
 </footer>
